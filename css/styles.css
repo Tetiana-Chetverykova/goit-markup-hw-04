@@ -26,10 +26,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-.page {
-  margin: 0 auto;
-  max-width: 1440px;
-}
+
 .container {
   max-width: 1158px;
   padding-left: 15px;
@@ -124,6 +121,7 @@ button {
   padding-bottom: 120px;
 }
 .back-color {
+  max-width: 1440px;
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -132,6 +130,8 @@ button {
     url("../images/office.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
 .main-title-padding {
   padding-top: 188px;
@@ -191,13 +191,16 @@ button {
   width: calc((100% - 72px) / 4);
 }
 .studio-skills-icon {
+  display: flex;
   fill: none;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: 264px;
   height: 112px;
-  padding: 24px 100px;
+  align-items: center;
+  justify-content: center;
   background: #f4f4fd;
+  margin-bottom: 8px;
 }
 .studio-rules {
   font-weight: 500;
@@ -206,7 +209,6 @@ button {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-  margin-top: 8px;
 }
 .studio-rules-desctiption {
   font-size: 16px;
@@ -228,7 +230,7 @@ button {
 }
 .team-list {
   display: flex;
-  gap: 24px;
+  column-gap: 24px;
 }
 .team-item-color {
   background-color: #ffffff;
@@ -276,7 +278,10 @@ button {
 }
 .social-list-item-link:hover,
 .social-list-item-link:focus {
-  background-color: #31d0aa;
+  background-color: #404bbf;
+}
+.social-list-item-link-icon {
+  fill: #f4f4fd;
 }
 .portfolio-list {
   display: flex;
@@ -307,6 +312,7 @@ button {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
+  transform: translateY(0%);
 }
 .box {
   position: relative;
@@ -342,6 +348,9 @@ button {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #2e2f42;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo-foot {
@@ -370,7 +379,11 @@ button {
 }
 .footer-contalner {
   display: flex;
-  column-gap: 120px;
+  align-items: baseline;
+  /* column-gap: 120px; */
+}
+.footer-contalner-first-column {
+  margin-right: 120px;
 }
 .social-media {
   font-weight: 500;
@@ -378,10 +391,15 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
 }
 .social-list-footer {
   display: flex;
   justify-content: center;
-  column-gap: 24px;
-  padding-top: 16px;
+  gap: 16px;
+  /* padding-top: 16px; */
+}
+.footer-social-list-item {
+  width: 40px;
+  height: 40px;
 }
